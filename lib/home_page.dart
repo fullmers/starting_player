@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
             semanticsLabel: 'Dice Button',
           ),
         ),
-        SizedBox(width: 12),
+        const SizedBox(width: 12),
         Text(widget.title),
       ],
     );
