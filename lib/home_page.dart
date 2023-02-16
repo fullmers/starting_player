@@ -25,9 +25,24 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Row titleBar = Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SizedBox(
+          width: 50,
+          height: 50,
+          child: SvgPicture.asset(
+            'assets/images/meeple.svg',
+            semanticsLabel: 'Dice Button',
+          ),
+        ),
+        SizedBox(width: 12),
+        Text(widget.title),
+      ],
+    );
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: titleBar, //Text(widget.title),
       ),
       body: Center(
         child: Column(
@@ -57,5 +72,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-// const Icon(Icons.rocket_launch_outlined),
