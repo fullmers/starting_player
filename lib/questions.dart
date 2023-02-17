@@ -10,7 +10,7 @@ const questions = [
   'Who has the largest physical game collection?',
   'Who speaks the most languages?',
   'Who lost the last game?',
-  'Who\'s birthday is earliest in the year?',
-  'Who\'s birthday is latest in the year?',
+  'Whose birthday is earliest in the year?',
+  'Whose birthday is latest in the year?',
   'Who has the most pets?',
 ];
