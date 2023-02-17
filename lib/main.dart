@@ -11,12 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Starting Player',
-      theme: ThemeData(
-        primarySwatch: Colors.yellow,
-      ),
-      home: const HomePage(title: 'Starting Player'),
+      home: HomePage(title: 'Starting Player'),
     );
   }
 }

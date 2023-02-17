@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:starting_player/colors.dart';
 import 'questions.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,41 +26,31 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    Row titleBar = Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        SizedBox(
-          width: 50,
-          height: 50,
-          child: SvgPicture.asset(
-            'assets/images/meeple.svg',
-            semanticsLabel: 'Dice Button',
-          ),
-        ),
-        const SizedBox(width: 12),
-        Text(widget.title),
-      ],
-    );
     return Scaffold(
       appBar: AppBar(
-        title: titleBar, //Text(widget.title),
+        backgroundColor: primaryColor,
+        title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(40.0),
-              child: Text(
-                _question,
-                style: Theme.of(context).textTheme.headlineMedium,
+      body: Container(
+        color: crownYellowColor,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(40.0),
+                child: Text(
+                  _question,
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _getQuestion,
+        backgroundColor: primaryColor,
         tooltip: 'Get Question',
         child: SizedBox(
           width: 36,
