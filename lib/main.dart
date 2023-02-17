@@ -11,9 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Starting Player',
-      home: HomePage(title: 'Starting Player'),
+      theme: ThemeData(fontFamily: 'Zilla Slab'),
+      home: const HomePage(title: 'Starting Player'),
     );
   }
 }

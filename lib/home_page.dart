@@ -2,7 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:starting_player/colors.dart';
+import 'package:starting_player/theme/colors.dart';
+import 'package:starting_player/theme/text_styles.dart';
+import 'package:starting_player/widgets.dart';
 import 'questions.dart';
 
 class HomePage extends StatefulWidget {
@@ -29,20 +31,19 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: primaryColor,
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: appBarTextStyle,
+        ),
       ),
       body: Container(
         color: crownYellowColor,
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.all(40.0),
-                child: Text(
-                  _question,
-                  style: Theme.of(context).textTheme.headlineMedium,
-                ),
+                padding: const EdgeInsets.fromLTRB(20, 100, 20, 0),
+                child: QuestionCard(question: _question),
               ),
             ],
           ),
